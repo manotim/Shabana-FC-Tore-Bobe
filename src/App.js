@@ -7,6 +7,7 @@ import Home from './components/Home'
 import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Tickets from './components/Tickets'
+import PaymentPage from './components/PaymentPage'
 import {
   BrowserRouter as Router,
   Routes,
@@ -69,6 +70,7 @@ function App() {
           <Route path='/fans' element={<Fans />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
+          <Route path='/payment' element={<PaymentPage />} />
         </Routes>
       </div>
     </Router>
