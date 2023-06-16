@@ -1,6 +1,22 @@
 import React from 'react'
 
 function SignUp() {
+  function generateOptions(min, max) {
+    const options = []
+    for (let value = min; value <= max; value++) {
+      options.push(
+        <option key={value} value={value}>
+          {value}
+        </option>
+      )
+    }
+    return options
+  }
+
+  // Usage:
+  const dayOptions = generateOptions(1, 31)
+  const monthOptions = generateOptions(1, 12)
+  const yearOptions = generateOptions(1900, 2005)
   return (
     <div className='form-details'>
       <h2>SIGN UP FOR SHABANA</h2>
@@ -289,9 +305,29 @@ function SignUp() {
           <option value='ZM'>Zambia</option>
           <option value='ZW'>Zimbabwe</option>
         </select>
+        <label for='dob_day'>Date Of Birth:</label>
+        <div className='dob-inputs'>
+          <label htmlFor='day'>Day:</label>
+          <select id='day' name='day'>
+            {dayOptions}
+          </select>
+
+          <label htmlFor='month'>Month:</label>
+          <select id='month' name='month'>
+            {monthOptions}
+          </select>
+
+          <label htmlFor='year'>Year:</label>
+          <select id='year' name='year'>
+            {yearOptions}
+          </select>
+        </div>
+
         <br />
         <br />
-        <button type='submit'>SIGN FOR SHABANA</button>
+        <button className='submit-btn' type='submit'>
+          SIGN FOR SHABANA
+        </button>
       </form>
     </div>
   )
