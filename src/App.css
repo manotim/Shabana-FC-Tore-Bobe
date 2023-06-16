@@ -22,6 +22,10 @@ header h1 {
   height: 4.5rem;
 }
 
+.title {
+  flex-grow: 1;
+}
+
 /* Navbar */
 nav {
   background-color: #d00027;
@@ -52,11 +56,11 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #00000070;
+  color: #f18c06e1;
 }
 
 nav ul li a.active {
-  color: #080808;
+  color: #f18c06e1;
 }
 
 .form-details {
@@ -89,5 +93,50 @@ nav ul li a.active {
 }
 
 .form-container button[type='submit'] {
-    margin-top: 10px;
-  }
+  margin-top: 10px;
+}
+
+.dob-inputs {
+  display: flex;
+  gap: 10px;
+}
+
+/* fixture styling starts */
+.football-fixture {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 0, 0, 0.8),
+    rgba(255, 0, 0, 0.2)
+  );
+  margin-left: 90px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+.club-logos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.club-logos img {
+  width: 70px;
+  height: 70px;
+}
+
+.match-details {
+  flex-grow: 1;
+}
+
+.buy-ticket {
+  margin-left: 20px;
+}
+
+/* fixture styling end here */
