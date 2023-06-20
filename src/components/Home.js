@@ -11,6 +11,13 @@ import news5 from '../assets/images/news/news-image5.jpg'
 function Home() {
   const [currentImage, setCurrentImage] = useState(0)
   const images = [homepic1, homepic2, homepic3]
+  const [imageInfo, setImageInfo] = useState({ title: '', description: '' })
+
+  const imageInfoData = [
+    { title: 'Image 1 Title', description: 'Description of image 1.' },
+    { title: 'Image 2 Title', description: 'Description of image 2.' },
+    { title: 'Image 3 Title', description: 'Description of image 3.' },
+  ]
 
   const goToNextImage = () => {
     setCurrentImage((prevImage) => (prevImage + 1) % images.length)
@@ -29,6 +36,11 @@ function Home() {
     return () => clearInterval(interval)
   }, [])
 
+  useEffect(() => {
+    const { title, description } = imageInfoData[currentImage]
+    setImageInfo({ title, description })
+  }, [currentImage])
+
   return (
     <>
       <div className='home-page'>
@@ -46,6 +58,11 @@ function Home() {
       </div>
 
       <div className='main'>
+        <div className='image-info'>
+          <h1 className='image-title'>{imageInfo.title}</h1>
+          <h5 className='image-description'>{imageInfo.description}</h5>
+          <button className='call-to-action'>Call to Action</button>
+        </div>
         <div className='news-section'>
           <h2 className='news-title'>News Updates</h2>
           <div className='news-cards'>
