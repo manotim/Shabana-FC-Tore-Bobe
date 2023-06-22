@@ -31,7 +31,7 @@ header h1 {
 .home-page {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,3 +282,30 @@ nav ul li a.active {
 }
 
 /* fixture styling end here */
+
+/* results styling start here */
+.result {
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+}
+
+.game {
+  display: flex;
+  align-items: center;
+}
+
+.game-details {
+  margin-right: 10px;
+}
+
+.team-details {
+  display: flex;
+  align-items: center;
+}
+
+.score {
+  margin: 0 10px;
+}
+
+/*results styling end here */
