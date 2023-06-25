@@ -1,4 +1,6 @@
 import React from 'react'
+import shabana from '../assets/images/fixtures/shabanafc.png'
+import darajanigogo from '../assets/images/fixtures/darajanigogo.png'
 
 function Fixtures() {
   return (
@@ -9,12 +11,8 @@ function Fixtures() {
         <div className='game'>
           <div className='team-details'>
             <div className='home-team'>
-              <span className='team-name'>Home Team Name</span>
-              <img
-                src='home-team-logo.png'
-                alt='Home Team Logo'
-                className='team-logo'
-              />
+              <span className='team-name'>SHABANA FC</span>
+              <img src={shabana} alt='Home Team Logo' className='team-logo' />
             </div>
             <div className='score'>
               <span className='home-score'>3</span>
@@ -23,11 +21,11 @@ function Fixtures() {
             </div>
             <div className='away-team'>
               <img
-                src='away-team-logo.png'
+                src={darajanigogo}
                 alt='Away Team Logo'
                 className='team-logo'
               />
-              <span className='team-name'>Away Team Name</span>
+              <span className='team-name'>DARAJANI GOGO</span>
             </div>
           </div>
           <div className='game-details'>
