@@ -1,4 +1,12 @@
 import React from 'react'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  NavLink,
+} from 'react-router-dom'
+import './App.css'
+
 import News from './components/News'
 import Fans from './components/Fans'
 import Fixtures from './components/Fixtures'
@@ -8,14 +16,6 @@ import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Tickets from './components/Tickets'
 import PaymentPage from './components/PaymentPage'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  NavLink,
-} from 'react-router-dom'
-
-import './App.css'
 
 function App() {
   return (
@@ -67,7 +67,7 @@ function App() {
           <Route path='/news' element={<News />} />
           <Route path='/tickets' element={<Tickets />} />
           <Route path='/fixtures' element={<Fixtures />} />
-          <Route path='/fans' element={<Fans />} />
+          <Route path='/fans/*' element={<Fans />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUp />} />
           <Route path='/payment' element={<PaymentPage />} />
