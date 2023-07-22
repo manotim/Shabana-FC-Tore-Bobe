@@ -1,70 +1,111 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-// import PaymentPage from './PaymentPage'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Typography, Button } from '@mui/material';
+import { styled } from '@mui/system';
+import shabana from '../assets/images/fixtures/shabanafc.png';
+import darajanigogo from '../assets/images/fixtures/darajanigogo.png';
+import gusiifc from '../assets/images/fixtures/gusiifc.png';
+import migoriyouthfc from '../assets/images/fixtures/migoriyouth.png';
 
-import shabana from '../assets/images/fixtures/shabanafc.png'
-import darajanigogo from '../assets/images/fixtures/darajanigogo.png'
-import gusiifc from '../assets/images/fixtures/gusiifc.png'
-import migoriyouthfc from '../assets/images/fixtures/migoriyouth.png'
+const TicketWrapper = styled('div')({
+  padding: '1rem',
+  '& .football-fixture': {
+    textAlign: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '80%',
+    background: 'linear-gradient(to right, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0.2))',
+    marginLeft: '90px',
+    marginBottom: '40px',
+    marginTop: '50px',
+    padding: '10px',
+  },
+  '& .club-logos': {
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    marginRight: '20px',
+  },
+  '& .club-logos img': {
+    width: '70px',
+    height: '70px',
+  },
+  '& .match-details': {
+    flexGrow: 1,
+  },
+  '& .buy-ticket': {
+    marginLeft: '20px',
+  },
+  '& button': {
+    padding: '5px 10px',
+    backgroundColor: '#2e2e2e',
+    color: '#fff',
+    border: 'none',
+    cursor: 'pointer',
+  },
+});
 
 function Tickets() {
   return (
-    <>
-      <div className='football-fixture'>
-        <div className='club-logos'>
-          <img src={shabana} alt='Shabana Logo' />
-          <img src={darajanigogo} alt='Darajani Gogo Logo' />
+    <TicketWrapper>
+      <Typography variant="h2">Tickets</Typography>
+
+      <div className="football-fixture">
+        <div className="club-logos">
+          <img src={shabana} alt="Shabana Logo" />
+          <img src={darajanigogo} alt="Darajani Gogo Logo" />
         </div>
-        <div className='match-details'>
-          <h2>Shabana vs Darajani Gogo</h2>
-          <p>Date: June 30, 2023</p>
-          <p>Time: 8:00 PM</p>
-          <p>Venue: Gusii Stadium</p>
+        <div className="match-details">
+          <Typography variant="h3">Shabana vs Darajani Gogo</Typography>
+          <Typography variant="body1">Date: June 30, 2023</Typography>
+          <Typography variant="body1">Time: 8:00 PM</Typography>
+          <Typography variant="body1">Venue: Gusii Stadium</Typography>
         </div>
-        <div className='buy-ticket'>
-          <Link to='/payment'>
-            <button>Buy Ticket</button>
+        <div className="buy-ticket">
+          <Link to="/payment">
+            <Button variant="contained">Buy Ticket</Button>
           </Link>
         </div>
       </div>
 
-      <div className='football-fixture'>
-        <div className='club-logos'>
-          <img src={gusiifc} alt='Gusiifc Logo' />
-          <img src={shabana} alt='Shabana Logo' />
+      <div className="football-fixture">
+        <div className="club-logos">
+          <img src={gusiifc} alt="Gusiifc Logo" />
+          <img src={shabana} alt="Shabana Logo" />
         </div>
-        <div className='match-details'>
-          <h2>Gusii Fc VS Shabana</h2>
-          <p>Date: July 5, 2023</p>
-          <p>Time: 8:00 PM</p>
-          <p>Venue: Gusii Stadium</p>
+        <div className="match-details">
+          <Typography variant="h3">Gusii Fc VS Shabana</Typography>
+          <Typography variant="body1">Date: July 5, 2023</Typography>
+          <Typography variant="body1">Time: 8:00 PM</Typography>
+          <Typography variant="body1">Venue: Gusii Stadium</Typography>
         </div>
-        <div className='buy-ticket'>
-          <Link to='/payment'>
-            <button>Buy Ticket</button>
+        <div className="buy-ticket">
+          <Link to="/payment">
+            <Button variant="contained">Buy Ticket</Button>
           </Link>
         </div>
       </div>
 
-      <div className='football-fixture'>
-        <div className='club-logos'>
-          <img src={shabana} alt='Shabana Logo' />
-          <img src={migoriyouthfc} alt='Migorifc Logo' />
+      <div className="football-fixture">
+        <div className="club-logos">
+          <img src={shabana} alt="Shabana Logo" />
+          <img src={migoriyouthfc} alt="Migorifc Logo" />
         </div>
-        <div className='match-details'>
-          <h2>Migori Youth vs Shabana</h2>
-          <p>Date: July 11, 2023</p>
-          <p>Time: 8:00 PM</p>
-          <p>Venue: Migori Stadium</p>
+        <div className="match-details">
+          <Typography variant="h3">Migori Youth vs Shabana</Typography>
+          <Typography variant="body1">Date: July 11, 2023</Typography>
+          <Typography variant="body1">Time: 8:00 PM</Typography>
+          <Typography variant="body1">Venue: Migori Stadium</Typography>
         </div>
-        <div className='buy-ticket'>
-          <Link to='/payment'>
-            <button>Buy Ticket</button>
+        <div className="buy-ticket">
+          <Link to="/payment">
+            <Button variant="contained">Buy Ticket</Button>
           </Link>
         </div>
       </div>
-    </>
-  )
+    </TicketWrapper>
+  );
 }
 
-export default Tickets
+export default Tickets;
