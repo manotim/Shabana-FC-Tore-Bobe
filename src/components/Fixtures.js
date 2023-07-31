@@ -2,7 +2,7 @@ import React from 'react';
 import { Typography, Button } from '@mui/material';
 import { styled } from '@mui/system';
 import shabana from '../assets/images/fixtures/shabanafc.png';
-import darajanigogo from '../assets/images/fixtures/darajanigogo.png';
+// import darajanigogo from '../assets/images/fixtures/darajanigogo.png';
 
 const FixtureWrapper = styled('div')({
   padding: '1rem',
@@ -84,7 +84,7 @@ function Fixtures() {
             </div>
             <div className="away-team">
               <img
-                src={darajanigogo}
+                src='https://res.cloudinary.com/dqoxcq0v8/image/upload/v1690661457/shabana/zqjrza5ng0fzaf1fgdco.png'
                 alt="Away Team Logo"
                 className="team-logo"
               />

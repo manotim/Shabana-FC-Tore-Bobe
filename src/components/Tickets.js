@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Typography, Button } from '@mui/material';
 import { styled } from '@mui/system';
-import shabana from '../assets/images/fixtures/shabanafc.png';
-import darajanigogo from '../assets/images/fixtures/darajanigogo.png';
-import gusiifc from '../assets/images/fixtures/gusiifc.png';
-import migoriyouthfc from '../assets/images/fixtures/migoriyouth.png';
+// import shabana from '../assets/images/fixtures/shabanafc.png';
+// import darajanigogo from '../assets/images/fixtures/darajanigogo.png';
+// import gusiifc from '../assets/images/fixtures/gusiifc.png';
+// import migoriyouthfc from '../assets/images/fixtures/migoriyouth.png';
 
 const TicketWrapper = styled('div')({
   padding: '1rem',
@@ -53,8 +53,8 @@ function Tickets() {
 
       <div className="football-fixture">
         <div className="club-logos">
-          <img src={shabana} alt="Shabana Logo" />
-          <img src={darajanigogo} alt="Darajani Gogo Logo" />
+          <img src='https://res.cloudinary.com/dqoxcq0v8/image/upload/v1690660867/shabana/inpbtzbkg2vvtqzoebtd.png' alt="Shabana Logo" />
+          <img src='https://res.cloudinary.com/dqoxcq0v8/image/upload/v1690661457/shabana/zqjrza5ng0fzaf1fgdco.png' alt="Darajani Gogo Logo" />
         </div>
         <div className="match-details">
           <Typography variant="h3">Shabana vs Darajani Gogo</Typography>
@@ -71,8 +71,8 @@ function Tickets() {
 
       <div className="football-fixture">
         <div className="club-logos">
-          <img src={gusiifc} alt="Gusiifc Logo" />
-          <img src={shabana} alt="Shabana Logo" />
+          <img src='https://res.cloudinary.com/dqoxcq0v8/image/upload/v1690661039/shabana/isxb0qbj0waeic5rne0a.png' alt="Gusiifc Logo" />
+          <img src='https://res.cloudinary.com/dqoxcq0v8/image/upload/v1690660867/shabana/inpbtzbkg2vvtqzoebtd.png' alt="Shabana Logo" />
         </div>
         <div className="match-details">
           <Typography variant="h3">Gusii Fc VS Shabana</Typography>
@@ -89,8 +89,8 @@ function Tickets() {
 
       <div className="football-fixture">
         <div className="club-logos">
-          <img src={shabana} alt="Shabana Logo" />
-          <img src={migoriyouthfc} alt="Migorifc Logo" />
+          <img src='https://res.cloudinary.com/dqoxcq0v8/image/upload/v1690660867/shabana/inpbtzbkg2vvtqzoebtd.png' alt="Shabana Logo" />
+          <img src='https://res.cloudinary.com/dqoxcq0v8/image/upload/v1690661062/shabana/sapvgu7onflq97vjrkpe.png' alt="Migorifc Logo" />
         </div>
         <div className="match-details">
           <Typography variant="h3">Migori Youth vs Shabana</Typography>
