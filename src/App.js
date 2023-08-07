@@ -22,6 +22,7 @@ import SportsSoccerIcon from '@mui/icons-material/SportsSoccer';
 import ArticleIcon from '@mui/icons-material/Article';
 import ConfirmationNumberIcon from '@mui/icons-material/ConfirmationNumber';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import PersonIcon from '@mui/icons-material/Person';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PaymentIcon from '@mui/icons-material/Payment';
 
@@ -34,6 +35,7 @@ import Login from './components/Login';
 import SignUp from './components/SignUp';
 import Tickets from './components/Tickets';
 import PaymentPage from './components/PaymentPage';
+import JerseySales from './components/JerseySales';
 
 const theme = createTheme();
 
@@ -104,12 +106,12 @@ const App = () => {
                   Tickets
                 </NavLinkStyled>
                 <NavLinkStyled exact to="/login" activeClassName="active">
-                  <AccountCircleIcon />
+                  <PersonIcon/>
                   Login
                 </NavLinkStyled>
-                <NavLinkStyled exact to="/signup" activeClassName="active">
+                <NavLinkStyled exact to="/jerseys" activeClassName="active">
                   <AccountCircleIcon />
-                  Sign Up
+                  Shop
                 </NavLinkStyled>
                 <NavLinkStyled exact to="/payment" activeClassName="active">
                   <PaymentIcon />
@@ -185,6 +187,7 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/payment" element={<PaymentPage />} />
+            <Route exact path='/jerseys' element={<JerseySales/>} />
           </Routes>
         </div>
       </Router>
